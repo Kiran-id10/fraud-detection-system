@@ -268,7 +268,7 @@ This system can be used by:
 
 ## 👨‍💻 Author
 
-**Kiran Kumar**  
+**Kiran Kumar S R**  
 Data Science & AI Engineer  
 
 ---

@@ -1,23 +1,29 @@
 # 🚀 Fraud Detection System — Production-Grade ML Platform
 
 <p align="center">
-Detect fraudulent financial transactions at scale using <b>PySpark + FastAPI + Streamlit</b>
+  <b>Detect fraudulent financial transactions at scale using PySpark + FastAPI + Streamlit</b>
 </p>
 
 <p align="center">
-<b>⚡ Real-Time Inference • 🔥 Big Data Processing • 📊 Interactive Analytics</b>
+  ⚡ Real-Time Inference • 🔥 Big Data Processing • 📊 Interactive Analytics
+</p>
+
+<p align="center">
+  🚨 Achieves <b>0.993 ROC-AUC</b> on 6.3M+ transactions with real-time fraud detection
 </p>
 
 ---
 
 ## 🏆 Badges
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-Production-green)
-![PySpark](https://img.shields.io/badge/PySpark-BigData-orange)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
-![Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PySpark-BigData-orange?logo=apachespark&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-HighPerformance-green?logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Streamlit-Interactive-red?logo=streamlit&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Model-LogisticRegression-yellow"/>
+  <img src="https://img.shields.io/badge/Status-Production--Ready-success"/>
+</p>
 
 ---
 
@@ -27,7 +33,7 @@ Detect fraudulent financial transactions at scale using <b>PySpark + FastAPI + S
 |--------|------|
 | 📊 Streamlit Dashboard | http://34.131.252.227:8501 |
 | ⚡ FastAPI Backend | http://34.131.252.227:8000 |
-| 📄 API Docs | http://34.131.252.227:8000/docs |
+| 📄 API Docs (Swagger) | http://34.131.252.227:8000/docs |
 | 🧪 Health Check | http://34.131.252.227:8000/health |
 
 > ⚡ Deployed on a cloud VM with real-time inference capability.
@@ -37,8 +43,18 @@ Detect fraudulent financial transactions at scale using <b>PySpark + FastAPI + S
 ## 🔥 Live Demo
 
 <p align="center">
-  <img src="screenshots/demo.gif" width="800">
+  <img src="screenshots/frd_demo.gif" width="900">
 </p>
+
+---
+
+## 🏅 Key Highlights
+
+- ⚡ Handles **6M+ transactions** using PySpark  
+- 🎯 Achieves **0.993 ROC-AUC**  
+- 🚀 Real-time fraud detection via FastAPI  
+- 📊 Interactive dashboard using Streamlit  
+- 🔍 Advanced feature engineering + imbalance handling  
 
 ---
 
@@ -47,11 +63,21 @@ Detect fraudulent financial transactions at scale using <b>PySpark + FastAPI + S
 Financial fraud detection is a high-impact real-world problem:
 
 - Millions of transactions per day  
-- Extremely imbalanced data (~0.13% fraud)  
-- Need for real-time decision systems  
-- Requirement for scalable ML pipelines  
+- Highly imbalanced dataset (~0.13% fraud)  
+- Requires real-time decisions  
+- Needs scalable ML infrastructure  
 
-👉 This project demonstrates a **production-grade ML system** (Data → Model → API → UI)
+👉 This project demonstrates a **complete production ML system**  
+(Data → Model → API → UI → Deployment)
+
+---
+
+## 🚀 What This System Does
+
+✔ Detects fraudulent transactions in real-time  
+✔ Processes millions of records using PySpark  
+✔ Provides instant predictions via API  
+✔ Visualizes fraud insights through dashboard  
 
 ---
 
@@ -138,7 +164,9 @@ flowchart LR
 
 ---
 
-## 📊 Dashboard Preview
+## 📊 Dashboard & API Preview
+
+### 🎯 Streamlit Dashboard
 
 <p align="center">
   <img src="screenshots/frd_dash1.png" width="700"><br><br>
@@ -150,16 +178,27 @@ flowchart LR
 
 ---
 
+### ⚡ FastAPI Swagger UI
+
+<p align="center">
+  <img src="screenshots/frd_dash6.png" width="700"><br><br>
+  <img src="screenshots/frd_dash7.png" width="700"><br><br>
+  <img src="screenshots/frd_dash8.png" width="700"><br><br>
+  <img src="screenshots/frd_dash9.png" width="700">
+</p>
+
+---
+
 ## 📂 Project Structure
 
-```
+```bash
 fraud-detection-system/
 │
 ├── app/                # FastAPI backend
 ├── streamlit_app/      # Streamlit dashboard
 ├── model/              # Trained Spark model
 ├── data/               # Dataset
-├── screenshots/        # UI visuals
+├── screenshots/        # UI + GIF + API images
 │
 ├── requirements.txt
 ├── README.md
@@ -193,12 +232,37 @@ streamlit run streamlit_app/app.py
 
 ---
 
+## 📌 Key Insights
+
+- Fraud transactions often involve high amounts with zero destination balance  
+- Balance inconsistencies are strong fraud indicators  
+- Transfer and Cash-out operations carry higher risk  
+
+---
+
+## 🎯 Use Case
+
+This system can be used by:
+
+- Banks for real-time fraud detection  
+- Fintech platforms for transaction monitoring  
+- Payment gateways for risk scoring 
+
+---
+
+## ⚠️ Limitations
+
+- Model trained on historical data (may not capture new fraud patterns)  
+- No real-time streaming integration yet  
+- Requires further tuning for production-scale latency  
+
+---
 ## 🚀 Future Improvements
 
-- 🔥 Kafka real-time streaming  
+- 🔥 Real-time streaming with Kafka  
 - 🔥 Explainable AI (SHAP / LIME)  
-- 🔥 Docker + CI/CD pipelines  
-- 🔥 Custom domain + HTTPS  
+- 🔥 Docker + CI/CD pipeline  
+- 🔥 Cloud deployment with custom domain  
 
 ---
 
@@ -211,7 +275,7 @@ Data Science & AI Engineer
 
 ## ⭐ Support
 
-If you found this useful:
+If you found this project useful:
 
 - ⭐ Star the repository  
 - 🔗 Share it  

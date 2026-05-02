@@ -1,11 +1,11 @@
 # 🚀 Fraud Detection System — Production-Grade ML Platform
 
 <p align="center">
-Detect fraudulent financial transactions in real-time using a scalable ML system built with FastAPI, PySpark, and Streamlit.
+Detect fraudulent financial transactions at scale using <b>PySpark + FastAPI + Streamlit</b>
 </p>
 
 <p align="center">
-<b>⚡ Real-Time Inference • 🔥 Scalable ML • 📊 Interactive Dashboard</b>
+<b>⚡ Real-Time Inference • 🔥 Big Data Processing • 📊 Interactive Analytics</b>
 </p>
 
 ---
@@ -14,16 +14,27 @@ Detect fraudulent financial transactions in real-time using a scalable ML system
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Production-green)
-![PySpark](https://img.shields.io/badge/PySpark-ML-orange)
+![PySpark](https://img.shields.io/badge/PySpark-BigData-orange)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
-## 🔥 Live Demo (Product Experience)
+## 🌐 Live Deployment
 
-🎥 Real-time fraud detection + batch analytics dashboard in action
+| Service | Link |
+|--------|------|
+| 📊 Streamlit Dashboard | http://34.131.252.227:8501 |
+| ⚡ FastAPI Backend | http://34.131.252.227:8000 |
+| 📄 API Docs | http://34.131.252.227:8000/docs |
+| 🧪 Health Check | http://34.131.252.227:8000/health |
+
+> ⚡ Deployed on a cloud VM with real-time inference capability.
+
+---
+
+## 🔥 Live Demo
 
 <p align="center">
   <img src="screenshots/demo.gif" width="800">
@@ -33,90 +44,108 @@ Detect fraudulent financial transactions in real-time using a scalable ML system
 
 ## 💡 Why This Project Matters
 
-Financial fraud costs billions every year — detecting it in real-time at scale is a real-world engineering challenge.
+Financial fraud detection is a high-impact real-world problem:
 
-This project demonstrates how to:
+- Millions of transactions per day  
+- Extremely imbalanced data (~0.13% fraud)  
+- Need for real-time decision systems  
+- Requirement for scalable ML pipelines  
 
-- ⚡ Build real-time fraud detection systems  
-- 🔥 Scale ML pipelines using PySpark  
-- 🚀 Deploy models via production-ready APIs  
-- 📊 Create interactive dashboards for decision-making  
+👉 This project demonstrates a **production-grade ML system** (Data → Model → API → UI)
 
-👉 This is not just a model — it's a complete production-style ML system
+---
+
+## 📊 Dataset Overview
+
+- 📦 Total Records: **6,362,620**  
+- 🎯 Fraud Cases: **8,213 (~0.13%)**  
+- ⚠️ Highly Imbalanced Dataset  
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Layer        | Technology            |
-|-------------|---------------------|
-| Backend     | FastAPI             |
-| ML Engine   | PySpark Pipeline    |
-| Frontend    | Streamlit           |
-| Visualization | Plotly / Matplotlib |
-| Deployment  | VM / GCP Ready      |
+| Layer | Technology |
+|------|-----------|
+| Big Data | PySpark |
+| ML Pipeline | Spark ML |
+| Backend | FastAPI |
+| Frontend | Streamlit |
+| Visualization | Plotly |
+| Deployment | Cloud VM |
 
 ---
 
-## ✨ Key Features
+## 🧠 ML Pipeline Overview
 
-### ⚡ Real-Time Prediction
-- Instant fraud detection via API  
-- Low latency inference  
+### ✔ Data Processing
+- Schema inference  
+- Null & duplicate handling  
+- Statistical profiling  
 
-### 📊 Interactive Dashboard
-- Single transaction prediction  
-- CSV batch processing  
-- Visual fraud distribution  
+### ✔ Feature Engineering
+- Log transformations  
+- IQR-based outlier detection  
+- Balance difference features  
+- Transaction behavior signals  
 
-### 🧠 Feature Engineering
-- Log transformation of transaction amount  
-- Outlier detection  
-- Balance difference analysis  
-- Behavioral signals  
+### ✔ Handling Imbalance
+- Undersampling  
+- Class-weighted learning  
 
-### 🔥 Scalable ML Pipeline
-- PySpark PipelineModel  
-- Handles large-scale transaction data  
+### ✔ Model Pipeline
+- StringIndexer  
+- OneHotEncoder  
+- VectorAssembler  
+- StandardScaler  
+- Logistic Regression  
 
 ---
 
-## 🏗️ System Architecture
+## 📈 Model Performance
+
+| Metric | Score |
+|--------|------|
+| ROC-AUC | **0.9931** |
+| Precision | **0.9998** |
+| Recall | **0.9378** |
+
+👉 High precision + strong recall → **Reliable fraud detection system**
+
+---
+
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
     A[User] --> B[Streamlit Dashboard]
-    B --> C[FastAPI Server]
-    C --> D[Feature Engineering]
+    B --> C[FastAPI API]
+    C --> D[Feature Engineering Layer]
     D --> E[PySpark ML Pipeline]
-    E --> F[Prediction Output]
-    F --> B
+    E --> F[Prediction Engine]
+    F --> G[Results & Insights]
+    G --> B
 ```
 
 ---
 
-## 📊 Model Performance
+## ⚡ API Endpoints
 
-| Metric    | Score  |
-|----------|--------|
-| Accuracy | 99%+   |
-| Precision | High  |
-| Recall   | High   |
-| ROC-AUC  | Strong |
-
-⚠️ Replace these with your real evaluation metrics for maximum impact
+| Endpoint | Method | Description |
+|----------|--------|------------|
+| /health | GET | Health check |
+| /predict | POST | Single prediction |
 
 ---
 
-## 📸 Screenshots
+## 📊 Dashboard Preview
 
 <p align="center">
-  <img src="screenshots/frd_dash9.png" width="700"><br><br>
-  <img src="screenshots/frd_dash7.png" width="700"><br><br>
-  <img src="screenshots/frd_dash6.png" width="700"><br><br>
+  <img src="screenshots/frd_dash1.png" width="700"><br><br>
+  <img src="screenshots/frd_dash2.png" width="700"><br><br>
   <img src="screenshots/frd_dash3.png" width="700"><br><br>
-  <img src="screenshots/frd_dash5.png" width="700"><br><br>
-  <img src="screenshots/frd_dash2.png" width="700">
+  <img src="screenshots/frd_dash4.png" width="700"><br><br>
+  <img src="screenshots/frd_dash5.png" width="700">
 </p>
 
 ---
@@ -126,17 +155,11 @@ flowchart LR
 ```
 fraud-detection-system/
 │
-├── app/                    # FastAPI backend
-│   └── app.py
-│
-├── streamlit_app/         # Streamlit frontend
-│   └── app.py
-│
-├── model/                 # Trained Spark model
-│   └── fraud_modelss/
-│
-├── data/
-├── screenshots/
+├── app/                # FastAPI backend
+├── streamlit_app/      # Streamlit dashboard
+├── model/              # Trained Spark model
+├── data/               # Dataset
+├── screenshots/        # UI visuals
 │
 ├── requirements.txt
 ├── README.md
@@ -158,44 +181,24 @@ cd fraud-detection-system
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run FastAPI Server
+### 3️⃣ Run API
 ```bash
 uvicorn app.app:app --host 0.0.0.0 --port 8000
 ```
 
-### 4️⃣ Run Streamlit Dashboard
+### 4️⃣ Run Dashboard
 ```bash
 streamlit run streamlit_app/app.py
 ```
 
 ---
 
-## ⚡ API Endpoints
-
-| Endpoint   | Method | Description          |
-|-----------|--------|----------------------|
-| /health   | GET    | Health check         |
-| /predict  | POST   | Single prediction    |
-
----
-
-## 📈 Features Used
-
-- Transaction Amount  
-- Transaction Type  
-- Balance Differences  
-- Destination Account Behavior  
-- Outlier Indicators  
-
----
-
 ## 🚀 Future Improvements
 
-- 🔥 Real-time streaming with Kafka  
-- 🔥 Explainable AI (feature contribution)  
-- 🔥 Docker + CI/CD pipeline  
-- 🔥 Cloud deployment with custom domain  
-- 🔥 Risk scoring system  
+- 🔥 Kafka real-time streaming  
+- 🔥 Explainable AI (SHAP / LIME)  
+- 🔥 Docker + CI/CD pipelines  
+- 🔥 Custom domain + HTTPS  
 
 ---
 
@@ -210,12 +213,12 @@ Data Science & AI Engineer
 
 If you found this useful:
 
-👉 Star ⭐ the repo  
-👉 Share with others  
-👉 Connect for collaboration  
+- ⭐ Star the repository  
+- 🔗 Share it  
+- 🤝 Connect  
 
 ---
 
 <p align="center">
-Built with 💡 Data + Engineering Precision
+Built with 💡 Big Data + Machine Learning + Engineering
 </p>

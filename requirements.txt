@@ -1,8 +1,10 @@
 fastapi
 uvicorn
+streamlit
 pyspark
 pandas
 numpy
-streamlit
-requests
-matplotlib
+scikit-learn
+plotly
+joblib
+pydantic

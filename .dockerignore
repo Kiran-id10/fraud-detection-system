@@ -1,0 +1,17 @@
+__pycache__
+*.ipynb
+*.csv
+*.parquet
+*.png
+*.jpg
+*.jpeg
+*.gif
+env
+venv
+.git
+.gitignore
+README.md
+screenshots
+data
+spark-warehouse
+.metastore

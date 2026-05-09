@@ -7,7 +7,7 @@ from pyspark.sql.functions import log1p, when, col
 # INIT
 # -------------------------------
 spark = SparkSession.builder.appName("fraud-api").getOrCreate()
-model = PipelineModel.load("/home/kirankumarsrkiru/fraud_modelss")
+model = PipelineModel.load("/app/model/fraud_modelss")
 
 app = FastAPI(title="Fraud Detection API")
 
